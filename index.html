@@ -25,6 +25,7 @@ nav a:hover{color:var(--accent)}
 section{padding:80px 20px}
 .wrap{max-width:1150px;margin:auto}
 h2{font-size:2.2rem;color:var(--green);text-align:center;margin-bottom:10px}
+h3.sub-h{font-size:1.5rem;color:var(--dark);margin:50px 0 14px}
 .sub{text-align:center;max-width:720px;margin:0 auto 50px;color:#555}
 .service{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;margin-bottom:60px}
 .service:nth-child(even) img{order:2}
@@ -37,6 +38,8 @@ th,td{padding:14px 16px;text-align:left;border-bottom:1px solid #e5e5e5}
 th{background:var(--green);color:#fff}
 tr:last-child td{border-bottom:none}
 .note{font-size:.9rem;color:#555;margin-top:16px}
+.warn{background:#fff8e6;border-left:5px solid var(--accent);border-radius:8px;padding:20px;margin:30px 0 0}
+.warn b{color:var(--dark)}
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:50px}
 .plan{background:#fff;border-radius:10px;padding:30px;box-shadow:0 4px 16px rgba(0,0,0,.08);border-top:5px solid var(--green)}
 .plan.best{border-top-color:var(--accent)}
@@ -65,7 +68,7 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
 .callbar a{display:block;background:#fff;border:2px solid var(--green);border-radius:10px;padding:18px;text-decoration:none;font-weight:700;color:var(--dark);text-align:center}
 .callbar a:hover{background:var(--light)}
 .callbar small{display:block;font-weight:400;color:#555;margin-top:4px}
-@media(max-width:780px){.service{grid-template-columns:1fr}.service:nth-child(even) img{order:0}nav ul{gap:14px}}
+@media(max-width:780px){.service{grid-template-columns:1fr}.service:nth-child(even) img{order:0}nav ul{gap:14px}table{font-size:.9rem}th,td{padding:10px 8px}}
 </style>
 </head>
 <body>
@@ -179,12 +182,24 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
 
 <section id="pricing" class="alt">
 <div class="wrap">
-  <h2>Waxahachie Pricing Per Acre</h2>
-  <p class="sub">Simple, transparent pricing for Waxahachie, TX and nearby Ellis County. Prices are per visit and scale by lot size. Lots under 1/4 acre are billed at the minimum.</p>
+  <h2>Pricing</h2>
+  <p class="sub">Simple, transparent pricing for Waxahachie, TX and nearby Ellis County. Prices are per visit and scale by lot size.</p>
 
+  <h3 class="sub-h">Residential Lawn Mowing & Yard Service</h3>
+  <table>
+    <tr><th>Lot Size</th><th>Basic Cut</th><th>Full Service</th><th>Showcase</th></tr>
+    <tr><td>Up to 1/4 acre</td><td>$40</td><td>$50</td><td>$65</td></tr>
+    <tr><td>1/4 to 1/2 acre</td><td>$45</td><td>$55</td><td>$70</td></tr>
+    <tr><td>1/2 to 1 acre</td><td>$65</td><td>$85</td><td>$125</td></tr>
+    <tr><td>1 to 2 acres</td><td>$120</td><td>$170</td><td>$250</td></tr>
+    <tr><td>2 to 5 acres</td><td>$280</td><td>$400</td><td>$600</td></tr>
+    <tr><td>Over 5 acres</td><td>Quoted on site</td><td>Quoted on site</td><td>Quoted on site</td></tr>
+  </table>
+  <p class="note"><b>Basic Cut</b> &mdash; mowing plus a blow-off of drives, walks and patios. <b>Full Service</b> &mdash; Basic Cut plus edging and trimming. <b>Showcase</b> &mdash; Full Service plus bagging, haul-off and lawn striping. Prices shown are per visit for regularly serviced lawns.</p>
+
+  <h3 class="sub-h">Per Acre Rates</h3>
   <table>
     <tr><th>Service</th><th>Price Per Acre</th><th>Minimum Charge</th></tr>
-    <tr><td>Grass Cutting (includes blow-off)</td><td>$65 / acre</td><td>$40</td></tr>
     <tr><td>Grass Bagging & Haul-Off (add-on)</td><td>+$30 / acre</td><td>$15</td></tr>
     <tr><td>Striping (add-on)</td><td>+$20 / acre</td><td>$10</td></tr>
     <tr><td>Edging & Trimming</td><td>$25 / acre</td><td>$15</td></tr>
@@ -192,30 +207,48 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
     <tr><td>Fertilization & Weed Control</td><td>$90 / acre</td><td>$50</td></tr>
     <tr><td>Aeration</td><td>$175 / acre</td><td>$85</td></tr>
     <tr><td>Overgrown Lot Clearing</td><td>$200+ / acre</td><td>$100</td></tr>
-    <tr><td>Gardening & Flower Beds</td><td>$45 / hour + materials</td><td>$45</td></tr>
   </table>
-  <p class="note">Overgrown grass (over 8") may carry an extra charge. Properties outside Waxahachie city limits may have a small travel fee. Final price confirmed after a free on-site look.</p>
+
+  <h3 class="sub-h">Mulch & Flower Bed Redo &mdash; Quoted Separately, Not Included</h3>
+  <p class="note">Mulch work and flower bed redo are <b>not included</b> in any mowing package or per-acre rate. They are priced on their own after we see the beds.</p>
+  <table>
+    <tr><th>Work</th><th>Price</th><th>Notes</th></tr>
+    <tr><td>Mulch installed &mdash; 1 to 2 cubic yards</td><td>$85 / yard</td><td>Sourced and spread by us</td></tr>
+    <tr><td>Mulch installed &mdash; 3 to 5 cubic yards</td><td>$75 / yard</td><td>Larger jobs priced per yard</td></tr>
+    <tr><td>Mulch installed &mdash; 6 yards and up</td><td>$65 / yard</td><td>Sourced and spread by us</td></tr>
+    <tr><td>Flower bed redo &mdash; weeding and clean-out</td><td>$50 / hour</td><td>Beds cleared and edged, materials extra</td></tr>
+    <tr><td>Flower bed redo &mdash; full refresh</td><td>From $125 per bed</td><td>Clean-out, new soil, new plants, fresh mulch</td></tr>
+    <tr><td>Bed materials &mdash; plants, soil, rock</td><td>At cost</td><td>Billed at what we pay, receipts on request</td></tr>
+    <tr><td>Shrub and hedge trimming</td><td>$50 / hour</td><td>Includes haul-off of trimmings</td></tr>
+  </table>
+
+  <div class="warn">
+    <p><b>Every quote is hand evaluated before you get a price.</b></p>
+    <p>The prices on this page are our starting rates. Before we confirm any job, we come out and look at the property &mdash; the size and condition of the lawn, the slope, the gate width, how overgrown it is, the number of beds, and how much mulch you want. After that walk-around, we give you a firm price in writing. Nothing is booked or charged until you have that number and say yes.</p>
+    <p><b>Call or text 469-412-6219 to set up your free on-site evaluation.</b></p>
+  </div>
 
   <div class="plans">
     <div class="plan">
       <h4>Basic Cut</h4>
-      <div class="price">$65<small>/acre</small></div>
-      <ul><li>Mowing</li><li>Blow-off of hard surfaces</li></ul>
+      <div class="price">$40<small> and up</small></div>
+      <ul><li>Mowing</li><li>Blow-off of hard surfaces</li><li>Good for small, tidy yards</li></ul>
     </div>
     <div class="plan best">
       <h4>Full Service &#9733; Most Popular</h4>
-      <div class="price">$85<small>/acre</small></div>
-      <ul><li>Mowing</li><li>Edging & trimming</li><li>Blow-off</li><li>Save $5/acre vs. separate</li></ul>
+      <div class="price">$50<small> and up</small></div>
+      <ul><li>Mowing</li><li>Edging & trimming</li><li>Blow-off</li><li>Best value for most homes</li></ul>
     </div>
     <div class="plan">
       <h4>Showcase</h4>
-      <div class="price">$125<small>/acre</small></div>
-      <ul><li>Everything in Full Service</li><li>Bagging & haul-off</li><li>Striping</li></ul>
+      <div class="price">$65<small> and up</small></div>
+      <ul><li>Everything in Full Service</li><li>Bagging & haul-off</li><li>Striping</li><li>The ballpark look at home</li></ul>
     </div>
   </div>
 
   <div class="calc">
     <h3>Quick Price Estimator</h3>
+    <p class="note" style="color:#ddd;margin:0 0 10px">This gives you a ballpark. Every job is hand evaluated on site before a price is confirmed.</p>
     <div class="grid">
       <div><label for="acres">Lot size (acres)</label><input id="acres" type="number" min="0.1" step="0.05" value="0.5"></div>
       <div><label for="plan">Package</label>
@@ -250,7 +283,7 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
     <div><b>Local to Waxahachie</b>We know Ellis County clay, heat and drought rules.</div>
     <div><b>Reliable Schedule</b>Same day each week, with a text before we arrive.</div>
     <div><b>Commercial Equipment</b>Sharp blades and striping kits on every mower.</div>
-    <div><b>No Contracts</b>Free quotes and service you can cancel anytime.</div>
+    <div><b>No Contracts</b>Free on-site quotes, and service you can cancel anytime.</div>
   </div>
 </div>
 </section>
@@ -258,7 +291,7 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
 <section id="contact">
 <div class="wrap">
   <h2>Get Your Free Quote</h2>
-  <p class="sub">Call, text or email us and we'll get back to you within one business day.</p>
+  <p class="sub">Call, text or email us and we'll come out to look at the property. Every quote is hand evaluated on site before a price is confirmed.</p>
   <div class="callbar">
     <a href="tel:+14694126219">Call or text 469-412-6219<small>Tap to call &mdash; fastest way to reach us</small></a>
     <a href="mailto:blackland.care@gmail.com">blackland.care@gmail.com<small>Tap to email us your address and details</small></a>
@@ -271,9 +304,10 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
     <input required name="phone" type="tel" placeholder="Phone number">
     <input name="email" type="email" placeholder="Email">
     <input required name="address" placeholder="Property address in Waxahachie / Ellis County">
-    <select name="lot_size"><option>Lot size: not sure</option><option>Under 1/4 acre</option><option>1/4 - 1/2 acre</option><option>1/2 - 1 acre</option><option>1 - 5 acres</option><option>5+ acres</option></select>
-    <textarea name="services" rows="4" placeholder="Which services are you interested in?"></textarea>
-    <button class="btn" type="submit">Request Quote</button>
+    <select name="lot_size"><option>Lot size: not sure</option><option>Under 1/4 acre</option><option>1/4 - 1/2 acre</option><option>1/2 - 1 acre</option><option>1 - 2 acres</option><option>2 - 5 acres</option><option>5+ acres</option></select>
+    <select name="services"><option>Services: not sure yet</option><option>Mowing / full yard service</option><option>Bagging & haul-off</option><option>Striping</option><option>Edging & trimming</option><option>Mulch installation</option><option>Flower bed redo</option><option>Leaf removal / cleanup</option><option>Fertilization & weed control</option><option>Aeration</option><option>Overgrown lot clearing</option></select>
+    <textarea name="details" rows="4" placeholder="Tell us about the property &mdash; size, condition, how many beds, anything else"></textarea>
+    <button class="btn" type="submit">Request a Free On-Site Quote</button>
   </form>
 </div>
 </section>
@@ -281,17 +315,18 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
 <footer>
   <p><strong>Blackland Lawn Care</strong> &middot; Serving Waxahachie, Midlothian, Red Oak, Ennis & all of Ellis County, TX</p>
   <p>Phone: <a href="tel:+14694126219">469-412-6219</a> &middot; Email: <a href="mailto:blackland.care@gmail.com">blackland.care@gmail.com</a></p>
-  <p>&copy; 2026 Blackland Lawn Care. All rights reserved.</p>
+  <p>All quotes are hand evaluated on site before a price is confirmed. &copy; 2026 Blackland Lawn Care. All rights reserved.</p>
 </footer>
 
 <script>
 const $=id=>document.getElementById(id);
+// Ballpark rates only. Real pricing is set after an on-site evaluation.
 function calc(){
   const a=Math.max(parseFloat($('acres').value)||0,0);
   const rate=+$('plan').value, f=+$('freq').value;
   let visit=Math.max(a*rate,40);
   let month=visit*f + ($('fert').checked?Math.max(a*90,50):0);
-  $('total').textContent=`≈ $${visit.toFixed(0)} per visit · $${month.toFixed(0)} ${f>1?'per month':'total'}`;
+  $('total').textContent=`≈ $${visit.toFixed(0)} per visit · $${month.toFixed(0)} ${f>1?'per month':'total'} — ballpark only, confirmed after an on-site look`;
 }
 ['acres','plan','freq','fert'].forEach(i=>$(i).addEventListener('input',calc));calc();
 </script>
