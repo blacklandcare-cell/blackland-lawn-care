@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blackland Lawn Care | Waxahachie, TX Lawn Mowing, Striping, Edging & Gardening</title>
-<meta name="description" content="Blackland Lawn Care offers professional mowing, bagging, striping, edging, gardening and cleanup in Waxahachie and Ellis County, Texas. Transparent pricing. Call or text 469-412-6219.">
+<meta name="description" content="Blackland Lawn Care offers professional mowing, bagging, striping, edging, gardening and cleanup in Waxahachie and Ellis County, Texas. Mulch installed at $0.50 per square foot. Call or text 469-412-6219.">
 <style>
 :root{--green:#2f6b2f;--dark:#16231a;--soil:#2a2420;--light:#f4f7f1;--accent:#c8a24a}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -157,7 +157,7 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
       <ul>
         <li>Seasonal flower and shrub planting</li>
         <li>Weeding and bed clean-outs</li>
-        <li>Mulch and rock installation</li>
+        <li>Mulch and lawn fabric installation</li>
         <li>Shrub and hedge trimming</li>
       </ul>
     </div>
@@ -210,19 +210,18 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
   </table>
 
   <h3 class="sub-h">Mulch & Flower Beds &mdash; Quoted Separately, Not Included</h3>
-  <p class="note">Mulch work and flower bed redo are <b>not included</b> in any mowing package or per-acre rate. They are priced on their own after we measure the beds. Mulch is priced by the square foot of bed area.</p>
+  <p class="note">Mulch work and flower bed redo are <b>not included</b> in any mowing package or per-acre rate. They are priced on their own after we measure the beds. Mulch and lawn fabric are priced by the square foot of bed area.</p>
   <table>
     <tr><th>Work</th><th>Price</th><th>Notes</th></tr>
-    <tr><td>Mulch installed &mdash; refresh, up to 300 sq ft</td><td>$1.25 / sq ft</td><td>Thin top-up over existing beds</td></tr>
-    <tr><td>Mulch installed &mdash; 300 to 800 sq ft</td><td>$1.10 / sq ft</td><td>Standard coverage</td></tr>
-    <tr><td>Mulch installed &mdash; 800 to 2,000 sq ft</td><td>$0.95 / sq ft</td><td>Better rate on larger beds</td></tr>
-    <tr><td>Mulch installed &mdash; over 2,000 sq ft</td><td>$0.85 / sq ft</td><td>Measured on site</td></tr>
+    <tr><td>Mulch installed</td><td>$0.50 / sq ft</td><td>Mulch and labour, spread by us</td></tr>
+    <tr><td>Lawn fabric installed</td><td>$1.00 / sq ft</td><td>Weed barrier under mulch, includes material</td></tr>
+    <tr><td>Mulch over new lawn fabric</td><td>$1.50 / sq ft</td><td>Fabric first, then mulch on top, priced together</td></tr>
     <tr><td>Flower bed redo &mdash; weeding and clean-out</td><td>$50 / hour</td><td>Beds cleared and edged, materials extra</td></tr>
-    <tr><td>Flower bed redo &mdash; full refresh</td><td>From $2.00 / sq ft</td><td>Clean-out, new soil, new plants, fresh mulch</td></tr>
+    <tr><td>Flower bed redo &mdash; full refresh</td><td>$50 / hour + materials</td><td>Clean-out, new soil, new plants, fresh mulch</td></tr>
     <tr><td>Bed materials &mdash; plants, soil, rock</td><td>At cost</td><td>Billed at what we pay, receipts on request</td></tr>
     <tr><td>Shrub and hedge trimming</td><td>$50 / hour</td><td>Includes haul-off of trimmings</td></tr>
   </table>
-  <p class="note"><b>How much is a square foot?</b> A typical 3&nbsp;ft by 20&nbsp;ft bed strip is 60 square feet. A 20&nbsp;ft by 40&nbsp;ft bed is 800 square feet. We measure every bed during your on-site visit and price from the real numbers.</p>
+  <p class="note"><b>How much is a square foot?</b> A typical 3&nbsp;ft by 20&nbsp;ft bed strip is 60 square feet, a 20&nbsp;ft by 40&nbsp;ft bed is 800 square feet, and a 100&nbsp;ft by 2&nbsp;ft strip along a house is 200 square feet. We measure every bed during your on-site visit and price from the real numbers.</p>
 
   <div class="warn">
     <p><b>Every quote is hand evaluated before you get a price.</b></p>
@@ -258,6 +257,8 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
       <div><label for="freq">Frequency</label>
         <select id="freq"><option value="1">One-time</option><option value="2">Bi-weekly (2/month)</option><option value="4" selected>Weekly (4/month)</option></select></div>
       <div><label for="beds">Bed area to mulch (sq ft)</label><input id="beds" type="number" min="0" step="10" value="0"></div>
+      <div><label for="fabric">Add lawn fabric under the mulch?</label>
+        <select id="fabric"><option value="0" selected>No fabric</option><option value="1">Yes &mdash; fabric +$1.00/sq ft</option></select></div>
     </div>
     <div class="checks">
       <label><input type="checkbox" id="fert"> Fertilization & weed control (+$90/acre, one-time)</label>
@@ -308,8 +309,9 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
     <input name="email" type="email" placeholder="Email">
     <input required name="address" placeholder="Property address in Waxahachie / Ellis County">
     <select name="lot_size"><option>Lot size: not sure</option><option>Under 1/4 acre</option><option>1/4 - 1/2 acre</option><option>1/2 - 1 acre</option><option>1 - 2 acres</option><option>2 - 5 acres</option><option>5+ acres</option></select>
-    <select name="services"><option>Services: not sure yet</option><option>Mowing / full yard service</option><option>Bagging & haul-off</option><option>Striping</option><option>Edging & trimming</option><option>Mulch installation</option><option>Flower bed redo</option><option>Leaf removal / cleanup</option><option>Fertilization & weed control</option><option>Aeration</option><option>Overgrown lot clearing</option></select>
-    <input name="bed_sqft" placeholder="Rough bed area to mulch (sq ft, if known)">
+    <select name="services"><option>Services: not sure yet</option><option>Mowing / full yard service</option><option>Bagging & haul-off</option><option>Striping</option><option>Edging & trimming</option><option>Mulch installation</option><option>Lawn fabric installation</option><option>Flower bed redo</option><option>Leaf removal / cleanup</option><option>Fertilization & weed control</option><option>Aeration</option><option>Overgrown lot clearing</option></select>
+    <select name="fabric"><option>Lawn fabric: not sure / no</option><option>Yes, add lawn fabric under the mulch</option></select>
+    <input name="bed_sqft" placeholder="Rough bed area (sq ft, if known)">
     <textarea name="details" rows="4" placeholder="Tell us about the property &mdash; size, condition, how many beds, anything else"></textarea>
     <button class="btn" type="submit">Request a Free On-Site Quote</button>
   </form>
@@ -325,18 +327,23 @@ footer{background:var(--soil);color:#ddd;text-align:center;padding:30px 20px;fon
 <script>
 const $=id=>document.getElementById(id);
 // Ballpark rates only. Real pricing is set after an on-site evaluation.
-function mulchRate(sq){ if(sq<=0) return 0; if(sq<=300) return 1.25; if(sq<=800) return 1.10; if(sq<=2000) return 0.95; return 0.85; }
+const MULCH=0.50, FABRIC=1.00;
 function calc(){
   const a=Math.max(parseFloat($('acres').value)||0,0);
   const rate=+$('plan').value, f=+$('freq').value;
-  let visit=Math.max(a*rate,40);
-  let month=visit*f + ($('fert').checked?Math.max(a*90,50):0);
+  const visit=Math.max(a*rate,40);
+  const month=visit*f + ($('fert').checked?Math.max(a*90,50):0);
   const sq=Math.max(parseFloat($('beds').value)||0,0);
+  const fab=+$('fabric').value;
   let line=`≈ $${visit.toFixed(0)} per visit · $${month.toFixed(0)} ${f>1?'per month':'total'}`;
-  if(sq>0) line+=` · mulch ≈ $${(sq*mulchRate(sq)).toFixed(0)} for ${sq} sq ft`;
+  if(sq>0){
+    const mul=sq*MULCH, fb=fab?sq*FABRIC:0;
+    line+=` · mulch ≈ $${mul.toFixed(0)}`;
+    if(fb>0) line+=` + fabric ≈ $${fb.toFixed(0)} (approx $${(mul+fb).toFixed(0)} total for ${sq} sq ft)`;
+  }
   $('total').textContent=line+' — ballpark only, confirmed after an on-site look';
 }
-['acres','plan','freq','fert','beds'].forEach(i=>$(i).addEventListener('input',calc));calc();
+['acres','plan','freq','fert','beds','fabric'].forEach(i=>$(i).addEventListener('input',calc));calc();
 </script>
 </body>
 </html>
